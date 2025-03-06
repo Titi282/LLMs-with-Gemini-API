@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      GEMINI_API_KEY: /run/secrets/gemini_api_key
+      OPENAI_API_KEY: /run/secrets/openai_api_key
+      QDRANT_API_KEY: /run/secrets/qdrant_api_key
+      QDRANT_URL: /run/secrets/qdrant_url_key
+    secrets:
+      - gemini_api_key
+      - openai_api_key
+      - qdrant_api_key
+      - qdrant_url
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    command: streamlit run ./src/frontend/main.py
+    environment:
+      GEMINI_API_KEY: /run/secrets/gemini_api_key
+      OPENAI_API_KEY: /run/secrets/openai_api_key
+      QDRANT_API_KEY: /run/secrets/qdrant_api_key
+      QDRANT_URL: /run/secrets/qdrant_url_key
+    secrets:
+      - gemini_api_key
+      - openai_api_key
+      - qdrant_api_key
+      - qdrant_url
+
+secrets:
+  gemini_api_key:
+    file: ./secrets/gemini_api_key.secret
+  openai_api_key:
+    file: ./secrets/openai_api_key.secret
+  qdrant_api_key:
+    file: ./secrets/qdrant_api_key.secret
+  qdrant_url:
+    file: ./secrets/qdrant_url.secret
