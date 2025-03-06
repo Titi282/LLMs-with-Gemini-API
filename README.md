@@ -99,6 +99,6 @@ cloud is used as the vector database.
 
 ```
 
-<p align="center"><img src="https://github.com/Titi282/LLMs-with-Gemini-API/blob/main/images/Screenshot%202025-03-06%20213919.png" width="300"></p>
-<p align="center"><img src="https://github.com/Titi282/LLMs-with-Gemini-API/blob/main/images/Screenshot%202025-03-06%20234105.png" width="300"></p>
-<p align="center"><img src="https://github.com/Titi282/LLMs-with-Gemini-API/blob/main/images/Screenshot%202025-03-06%20235542.png" width="300"></p>
+<p align="center"><img src="https://github.com/Titi282/LLMs-with-Gemini-API/blob/main/images/Screenshot%202025-03-06%20213919.png" ></p>
+<p align="center"><img src="https://github.com/Titi282/LLMs-with-Gemini-API/blob/main/images/Screenshot%202025-03-06%20234105.png" ></p>
+<p align="center"><img src="https://github.com/Titi282/LLMs-with-Gemini-API/blob/main/images/Screenshot%202025-03-06%20235542.png" ></p>
